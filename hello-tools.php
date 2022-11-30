@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://www.helloagdigital.com
- * @since             1.0.0
+ * @since             1.0.3
  * @package           Hello_Tools
  *
  * @wordpress-plugin
  * Plugin Name:       Hello Utilily & Security
  * Plugin URI:        https://www.helloagdigital.com/tools
  * Description:       Recursos adicionais para o correto funcionamento do site e proteção
- * Version:           1.0.2
+ * Version:           1.0.3
  * Author:            hello. agência digital
  * Author URI:        https://www.helloagdigital.com
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'HELLO_TOOLS_VERSION', '1.0.2' );
+define( 'HELLO_TOOLS_VERSION', '1.0.3' );
 
 /**
  * The code that runs during plugin activation.
@@ -78,14 +78,15 @@ function run_hello_tools() {
 	$plugin = new Hello_Tools();
 	$plugin->run();
 
-	if( ! class_exists( 'Hello_Tools_Updater' ) ){
-		include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
-	}
-	
-	$updater = new Hello_Tools_Updater( __FILE__ );
-	$updater->set_username( 'guedesleandro' );
-	$updater->set_repository( 'hello-tools' );
-	$updater->initialize();
-
 }
+
+if( ! class_exists( 'Hello_Tools_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+}
+
+// $updater = new Hello_Tools_Updater( __FILE__ );
+// $updater->set_username( 'guedesleandro' );
+// $updater->set_repository( 'hello-tools' );
+// $updater->initialize();
+
 run_hello_tools();
