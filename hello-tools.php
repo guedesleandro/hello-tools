@@ -16,7 +16,7 @@
  * Plugin Name:       Hello Utilily & Security
  * Plugin URI:        https://www.helloagdigital.com/tools
  * Description:       Recursos adicionais para o correto funcionamento do site e proteção
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            hello. agência digital
  * Author URI:        https://www.helloagdigital.com
  * License:           GPL-2.0+
@@ -35,7 +35,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'HELLO_TOOLS_VERSION', '1.0.1' );
+define( 'HELLO_TOOLS_VERSION', '1.0.2' );
 
 /**
  * The code that runs during plugin activation.
