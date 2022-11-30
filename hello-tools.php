@@ -16,7 +16,7 @@
  * Plugin Name:       Hello Utilily & Security
  * Plugin URI:        https://www.helloagdigital.com/tools
  * Description:       Recursos adicionais para o correto funcionamento do site e proteção
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            hello. agência digital
  * Author URI:        https://www.helloagdigital.com
  * License:           GPL-2.0+
@@ -85,6 +85,7 @@ function run_hello_tools() {
 	$updater = new Hello_Tools_Updater( __FILE__ );
 	$updater->set_username( 'guedesleandro' );
 	$updater->set_repository( 'hello-tools' );
+	$updater->initialize();
 
 }
 run_hello_tools();
